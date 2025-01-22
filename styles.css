@@ -1,0 +1,120 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    /* Netflix black theme */
+    color: #fff;
+}
+
+header {
+    background-color: #e50914;
+    /* Netflix red */
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    max-width: 150px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #999;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #b00610;
+}
+
+/* Movie Grid */
+.movies-section {
+    margin: 20px;
+}
+
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.movie-card {
+    width: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #222;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+.movie-image {
+    width: 100%;
+    display: block;
+}
+
+.movie-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.movie-title {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.movie-date {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .movie-card {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-card {
+        width: 120px;
+    }
+
+    .search-bar input {
+        width: 70%;
+    }
+}
